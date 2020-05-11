@@ -1,0 +1,42 @@
+/* Aula inicial :D */
+body{
+  background-image: url(https://images.pexels.com/photos/1029615/pexels-photo-1029615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: auto 175vh;
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+}
+  
+.menu{
+  background-color: whitesmoke
+  
+}
+
+.menu ul{
+  display: flex;
+  justify-content: space-around
+}
+
+.menu li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.site-title {
+  margin:50px 30px 10px;
+  font-weight: 500;  
+}
+
+.site-subtitle {
+  margin:0px 30px 30px;
+  font-weight: 300;
+  font-size: 1.3em;
+}
