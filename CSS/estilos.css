@@ -1,26 +1,66 @@
-/* Aula inicial :D */
+/* reset do css */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
-  background-image: url(../Images/background.jpg);
+  background-image: url(../img/background.jpg);
   background-size: auto 175vh;
-  font-family: 'Raleway', sans-serif;
   height: 100vh;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos*/
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
   
 .menu{
   background-color: whitesmoke;
-  }
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
 
 .menu ul{
   display: flex;
   justify-content: space-around;
-  margin-bottom: 0;
-  padding: 0;
-  box-shadow:5px 5px 2px grey;
+    
 }
 
 .menu li {
   list-style: none;
   
+}
+
+.menu a{
+  padding: 10px 5vw;
+  display: block;
+}
+
+.menu a:hover {
+  border-bottom: 1.5px solid grey;
+  font-weight: 600;
+  margin:-1.5px 0px 0px ;
 }
 
 a {
@@ -29,25 +69,102 @@ a {
   
 }
 
-
 .site-title {
-  margin:50px 30px 10px;
   font-weight: 500;
-    
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Raleway', sans-serif;
 }
 
 .site-subtitle {
-  margin:0px 30px 30px;
   font-weight: 300;
-  font-size: 1.3em;
+  font-size: 1.55em;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
-.linkmenu {
-   padding: 5px 50px;
+.portfolio {
+  padding: 2em;
+  /*! height:calc(100vh - 8em); */
 }
 
-.linkmenu:hover {
-  border-top: 1.5px solid grey;
+.portfolio h2 {
+  font-family: 'Bentham', serif;
+  font-weight: 100;
+  font-size: 2.5em;
+  margin-bottom: .8em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 1.5em;
+  }
+
+@media (min-width: 580px) {
+  .portfolio .grid {
+  grid-template-columns: 250px 250px;
+  justify-content: center;
+  align-content: center;
+  height:calc(100vh - 15em);
+  background-color: antiquewhite;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+  grid-template-columns: 250px 250px;
+  justify-content: center;
+  
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio .grid {
+  grid-template-columns: repeat(4, 250px);
+  justify-content: center;
+  
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.portfolio figcaption:hover {
+  text-shadow: 2px 2px lightgrey;
+}
+
+.img-portfolio {
+  height: 150px;
+  width: 250px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.img-portfolio:hover {
+  box-shadow: 5px 5px lightgrey;
+}
+
+footer {
+  margin-top: 30px;
+  position: relative;
+  bottom: 5px;
+}
+
+.creditos {
+  font-size: .8em;
+  text-align: center;
+  line-height: 2em;
+  
+}
+
+.creditos a:hover {
+  text-decoration: none;
+  color: black;
   font-weight: 600;
-  margin: 0px 0px -1.5px;
+  line-height: 2em;
+
 }
+
+
+
