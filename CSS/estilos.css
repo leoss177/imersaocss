@@ -39,6 +39,7 @@ header {
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu ul{
@@ -55,18 +56,32 @@ header {
 .menu a{
   padding: 10px 5vw;
   display: block;
+  transition: background-color .7s, color .7s;
 }
 
 .menu a:hover {
-  border-bottom: 1.5px solid grey;
-  font-weight: 600;
-  margin:-1.5px 0px 0px ;
+  background-color: black;
+  color: whitesmoke;  
 }
 
 a {
   text-decoration: none;
   color: black;
-  
+}
+
+.titulo{
+  transform: scale(.2) translateY(50vh);
+  opacity: 0;
+
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+/*@keyframes animacaoTitulo {
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+*/
 }
 
 .site-title {
@@ -83,11 +98,13 @@ a {
   font-family: 'Raleway', sans-serif;
 }
 
+.contato,
 .portfolio {
   padding: 2em;
-  /*! height:calc(100vh - 8em); */
+  height:100vh
 }
 
+.contato h2,
 .portfolio h2 {
   font-family: 'Bentham', serif;
   font-weight: 100;
@@ -106,7 +123,7 @@ a {
   justify-content: center;
   align-content: center;
   height:calc(100vh - 15em);
-  background-color: antiquewhite;
+  
   }
 }
 
@@ -130,20 +147,36 @@ a {
   text-align: center;
 }
 
-.portfolio figcaption:hover {
-  text-shadow: 2px 2px lightgrey;
-}
-
 .img-portfolio {
   height: 150px;
   width: 250px;
   object-fit: cover;
   object-position: bottom;
+  transition: transform 500ms;
+  
 }
 
 .img-portfolio:hover {
-  box-shadow: 5px 5px lightgrey;
+  transform: scale(1.1);
 }
+
+.contato .icons {
+  text-align: center;
+  
+}
+
+.contato a{
+  color: black;
+  font-size: 3em;
+  transition: text-shadow .7s;
+}
+
+.contato a:active,
+.contato a:hover {
+  /*color: rgb(80,80,80);*/
+  text-shadow: 0px 0px 5px rgb(80,80,80);
+}
+
 
 footer {
   margin-top: 30px;
