@@ -6,8 +6,8 @@
 }
 
 body{
-  background-image: url(../img/background.jpg);
-  background-size: auto 175vh;
+  background-image: linear-gradient(to bottom, rgb(178, 213, 228), 	rgb(76, 118, 133));
+  background-size: auto 415vh;
   height: 100vh;
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
@@ -46,6 +46,7 @@ header {
   display: flex;
   justify-content: space-around;
     
+  box-shadow: 0px 0px 5px rgb(161, 155, 154);
 }
 
 .menu li {
@@ -69,20 +70,6 @@ a {
   color: black;
 }
 
-.titulo{
-  transform: scale(.2) translateY(50vh);
-  opacity: 0;
-
-  animation: linear 2s animacaoTitulo forwards;
-}
-
-/*@keyframes animacaoTitulo {
-  to {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-*/
-}
 
 .site-title {
   font-weight: 500;
@@ -98,12 +85,22 @@ a {
   font-family: 'Raleway', sans-serif;
 }
 
+.sobre,
 .contato,
 .portfolio {
   padding: 2em;
-  height:100vh
+  height:100vh;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2 {
   font-family: 'Bentham', serif;
@@ -112,9 +109,42 @@ a {
   margin-bottom: .8em;
 }
 
+.sobre p {
+  text-indent: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+
+.sobre a {
+  text-decoration: underline;
+}
+
+.sobre a:hover {
+  text-decoration: none;
+  background-color: whitesmoke;
+}
+
+.sobre .avatar {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 600px){
+  .sobre .avatar {
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 1em;
+  }
+}
+
+.sobre .avatar img {
+  height: 250px;
+  width: auto;
+  border-radius: 50%;
+}
 .portfolio .grid {
   display: grid;
-  gap: 1.5em;
+  gap: 2em;
   }
 
 @media (min-width: 580px) {
@@ -131,6 +161,7 @@ a {
   .portfolio .grid {
   grid-template-columns: 250px 250px;
   justify-content: center;
+  gap: 3em;
   
   }
 }
@@ -160,6 +191,15 @@ a {
   transform: scale(1.1);
 }
 
+.grid.icons {
+  height: 25vh;
+  align-content: center;
+  display: grid;
+  column-gap: 2em;
+  grid-template-columns: repeat(5, 2.5em);
+  justify-content: center;
+}
+
 .contato .icons {
   text-align: center;
   
@@ -173,7 +213,6 @@ a {
 
 .contato a:active,
 .contato a:hover {
-  /*color: rgb(80,80,80);*/
   text-shadow: 0px 0px 5px rgb(80,80,80);
 }
 
@@ -188,6 +227,7 @@ footer {
   font-size: .8em;
   text-align: center;
   line-height: 2em;
+  
   
 }
 
